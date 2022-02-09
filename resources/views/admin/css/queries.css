@@ -1,0 +1,21 @@
+/* BELOW 944PX */
+@media (max-width: 59em) {
+  .body-img-container {
+    justify-content: center;
+  }
+  .body-img-container img {
+    width: 60%;
+  }
+  .main-body-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* BELOW 496 PX */
+@media (max-width: 31em) {
+  html {
+    font-size: 50%;
+  }
+  .primary-heading {
+    font-size: 4.5rem;
+  }
+}

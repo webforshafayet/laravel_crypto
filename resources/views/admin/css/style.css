@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #11104d;
+  color: #ffffff;
+}
+
+.margin-centered-h {
+  margin-left: auto;
+  margin-right: auto;
+}
+.margin-btm-sm {
+  margin-bottom: 1.5rem;
+}
+.margin-btm-m {
+  margin-bottom: 2.5rem;
+}
+.margin-btm-lg {
+  margin-bottom: 3.5rem;
+}
+/********************************************************************************/
+/* HEADER */
+/********************************************************************************/
+.header {
+  width: 100%;
+}
+.header-container {
+  display: flex;
+  justify-content: end;
+  padding: 3rem;
+}
+.logo-container {
+  max-width: 20rem;
+}
+.header-logo {
+  width: 100%;
+}
+/********************************************************************************/
+/* MAIN */
+/********************************************************************************/
+.main-section {
+  padding: 10rem 0;
+}
+.main-body-container {
+  max-width: 150rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+.body-img-container {
+  display: flex;
+  justify-content: end;
+}
+.body-img-container img {
+  width: 80%;
+}
+.content-login {
+  padding: 5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.primary-heading {
+  font-size: 6.5rem;
+  font-weight: 900;
+}
+.content-login-text {
+  font-size: 2rem;
+}
+.content-login-form input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.5rem;
+  background-color: #121053;
+  border: none;
+  border-radius: 3px;
+  /* box-shadow: 1px 1px 2px rgba(45, 43, 182, 0.61); */
+  box-shadow: rgba(45, 43, 182, 0.61) 0px 0px 4px 0px,
+    rgba(45, 43, 182, 0.61) 0px 0px 1px 0px;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+}
+.content-login-form input::placeholder {
+  color: #7c7c7c;
+  font-weight: 700;
+}
+.forget-password {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.form-login-button {
+  background-color: #053eff;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f7f7f7;
+  padding: 1.5rem 0;
+  border: none;
+  border-radius: 5px;
+}

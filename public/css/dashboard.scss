@@ -1,0 +1,878 @@
+@import 'customFileField';
+
+body{
+    background: #F7F7FF;
+    box-sizing: border-box;
+}
+
+.maxContainer{
+    max-width: 1680px;
+}
+
+.spacer{
+    height: 60px;
+}
+
+header{
+    transition: .5s;
+    z-index: 12;
+    background: #F7F7FF;
+    top: 0;
+    left: 0;
+    .logo{
+        width: 200px;
+
+        #navToggler{
+            width: 40px;
+        }
+    }
+
+    .menuList{
+        width: calc(100% - 220px);
+
+        .headerMenuItems{
+            width: calc(100% - 215px);
+            li{
+                .switchBtnLabel{
+                    width: 40px;
+                }
+        
+                .switchChk{
+                    z-index: 5;
+                    opacity: 0;
+                    top: 9px;
+                    left: 5px;
+                    width: 30px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+                
+                .switchButton {
+                    left: 5px;
+                    top: 12px;
+                    width: 30px;
+                    height: 14px;
+                    background: #CDD8FF;
+                }
+                
+                .switchButton:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background: #053EFF;
+                    top: -3px;
+                    transition: .1s;
+                }
+                
+                .switchBtnLabel .switchChk:checked ~ .switchButton{
+                    background: #81d4fa;
+                }
+                
+                .switchBtnLabel .switchChk:checked ~ .switchButton:before{
+                    left: 10px;
+                }
+    
+                .activeBell::before{
+                    content: '';
+                    position: absolute;
+                    background: #053EFF;
+                    border-radius: 50%;
+                    width: 8px;
+                    height: 8px;
+                    top: -4px;
+                    right: 2px;
+                }
+            }
+        }
+
+        .usrInfo{
+            width: 205px;
+        
+            p{
+                color: #141414;
+                margin-bottom: -5px;
+                span{
+                    color: #053EFF;
+                    font-weight: 700;
+                }
+            }
+
+            .status{
+                font-size: 12px;
+                padding: 0 5px;
+                padding-bottom: 2px;
+            }
+
+            .unvarified{
+                background: #FF0F0F;
+            }
+        }
+
+        .usrInfo::before{
+            background: #B9B9BF;
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 1px;
+            height: 35px;
+        }
+    }
+
+    @media only screen and (max-width: 767px){
+        .logo{
+            width: 160px;
+            a{
+                margin-right: 0;
+                img{
+                    width: 115px;
+                }
+            }
+
+            #navToggler{
+                width: 35px;
+            }
+        }
+
+        .menuList{
+            width: calc(100% - 170px);
+
+            .headerMenuItems{
+                width: calc(100% - 200px);
+                li{
+                    .switchBtnLabel{
+                        width: 30px;
+                        
+                        .switchButton{
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+            .usrInfo{
+                width: 190px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 575px){
+        #headerMenuToggler{
+            font-size: 20px;
+            padding: 0 10px;
+            padding-bottom: 10px;
+            height: 30px;
+        }
+
+        .logo{
+            width: 100%;
+            a{
+                margin-right: 0;
+                img{
+                    width: auto;
+                }
+            }
+
+            #navToggler{
+                width: 40px;
+            }
+        }
+
+        .menuList{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .headerMenuItems{
+                flex-basis: 90px;
+                padding: 0 5px;
+            }
+
+            .usrInfo{
+                padding: 5px;
+            }
+
+            .usrInfo::before{
+                height: 60px;
+            }
+        }
+    }
+}
+
+nav{
+    bottom: 0;
+    width: 210px;
+    background: #F7F7FF;
+    z-index: 9;
+    overflow-y: auto;
+    transition: .1s;
+
+    ul{
+        li{
+            a{
+                font-size: 14px;
+                color: #101010;
+
+                img{
+                    width: 25px;
+                    height: auto;
+                }
+            }
+
+            a:hover, .active{
+                background: #EAEDFF;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .menuBottom{
+        .logout{
+            background: #053EFF;
+            img{
+                width: 25px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px){
+        left: -220px;
+    }
+
+    .opened{
+        left: 0;
+    }
+}
+
+nav.opened{
+    left: 10px;
+}
+
+
+nav::-webkit-scrollbar, nav .langList::-webkit-scrollbar{
+    width: 5px;
+}
+
+main .transationHistory::-webkit-scrollbar{
+    height: 5px;
+}
+
+nav::-webkit-scrollbar-thumb, nav .langList::-webkit-scrollbar-thumb, .transationHistory::-webkit-scrollbar-thumb{
+    background: #B9B9BF;
+    border-radius: 50px;
+}
+
+main{
+    width: calc(100% - 220px);
+
+    @media only screen and (max-width: 767px){
+        width: 100%;
+    }
+
+    .pageHeading{
+        h2{
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        p{
+            color: #838387;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    .accountSummary{
+        .singleSummary{
+            border-radius: 10px;
+            .summaryLeft{
+                width: 20%;
+                background: #CDD8FF;
+                padding: 10px 0;
+                padding-bottom: 12px;
+            }
+
+            .summaryRight{
+                width: 80%;
+                color: #101010;
+
+                h4{
+                    font-size: 14px;
+                }
+
+                p{
+                    color: #878787;
+                    font-size: 12px;
+                }
+
+                h3{
+                    font-size: 18px;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+
+    .statics{
+        .singleStat{
+            border-radius: 10px;
+        }
+
+        .statTitle{
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: .4px;
+
+            span{
+                font-weight: 700;
+                color: #1F52FF;
+            }
+        }
+
+        .overviewTable {
+            thead{
+                select{
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    position: absolute;
+                    width: calc(50% - 2px);
+                    background: #FCFCFF;
+                    top: 0;
+                }
+    
+                .firstTh select{
+                    left: 0;
+                }
+    
+                .lastTh select{
+                    right: 0;
+                }
+    
+                .dropdownContainer{
+                    height: 50px;
+                }
+    
+                .dropdownContainer::before, .dropdownContainer::after{
+                    content: '';
+                    position: absolute;
+                    top: 14px;
+                    border: 5px solid transparent;
+                    border-top-color: #101010;
+                    z-index: 10;
+                }
+                
+                .dropdownContainer::before{
+                    right: 10px;
+                }
+    
+                .dropdownContainer::after{
+                    left: calc(50% - 22px);
+                }
+            }
+
+            tbody{
+                tr{
+                    border-radius: 10px;
+                    td{
+                        position: relative;
+                        z-index: 2;
+                        font-size: 12px;
+
+                        .overviewSub{
+                            color: #053EFF;
+                        }
+
+                        sup{
+                            font-size: 8px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    .amount{
+                        font-weight: 500;
+                    }
+
+                }
+
+                tr:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    border-radius: 10px;
+                }
+                tr:hover:before{
+                    background: #F2F5FF;
+                }
+            }
+        }
+
+        .analyticsWrap{
+            @media only screen and (max-width: 575px){
+                min-height: 380px;
+            }
+            .analyticsGraph{
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .ipLogWrap{
+            .ipLogTable{
+                font-size: 13px;
+
+                .logTitle{
+                    color: #ACACAC;
+                    font-style: italic;
+
+                    span{
+                        width: 49%;
+                    }
+                }
+
+                li{
+                    background: #FFFBF2;
+                    flex-wrap: wrap;
+                    border-radius: 10px;
+                    font-weight: 500;
+                    
+                    span{
+                        flex: 1;
+                        flex-basis: 50%;
+
+                        .time{
+                            color: #F3AB02;
+                        }
+                    }
+
+                    .ipAddress{
+                        font-weight: 700;
+                        font-size: 12px;
+                        padding-top: 10px;
+                    }
+                }
+
+                @media only screen and (max-width: 575px){
+                    font-size: 11px;
+                    .ipAddress{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .depositFundsContents{
+        .fundCalculator{
+            background: #F3AB02;
+            border-radius: 10px;
+            color: #F7F1EB;
+            font-size: 12px;
+
+            .calcTitle{
+                img{
+                    width: 45px;
+                }
+
+                p{
+                    font-weight: 700;
+                    border-left: 1px solid #f7f1eb85;
+                }
+            }
+
+            .amountInput{
+                p{
+                    font-weight: 600;
+                }
+
+                .icon{
+                    background: #F6BC35;
+                    border-right: none;
+                    img{
+                        width: 15px;
+                    }
+                }
+
+                .icon, input{
+                    border-color: #F7C858!important;
+                }
+
+                input{
+                    color: #f1efeb;
+                    border-left: none;
+                    background: transparent;
+                    transition: .4s;
+                }
+
+                input::placeholder{
+                    color: #F7C655;
+                }
+
+                input:focus{
+                    box-shadow: none!important;
+                    background: #e0a009;
+                }
+            }
+
+            @media only screen and (min-width: 1100px){
+                letter-spacing: .5px;
+                font-size: 13px;
+            }
+        }
+
+        .depWit{
+            @include customFileField;
+            border-radius: 10px;
+
+            .label{
+                font-size: 14px;
+                font-weight: 600;
+                color: #101010;
+            }
+
+            .qrWrap{
+                width: 205px;
+                border-radius: 10px;
+                padding: 35px;
+                border: 1px solid #BFCDFF;
+            }
+
+            .depositInputs{
+                padding-top: 20px;
+
+                #copyWalAdd{
+                    cursor: pointer;
+                }
+
+                .icon, input{
+                    border-color: #BFCDFF;
+                }
+
+                input{
+                    background: transparent;
+                    transition: .3s;
+                }
+
+                input:focus{
+                    box-shadow: none!important;
+                }
+
+                .icon{
+                    background: #CDD8FF;
+                    width: 50px;
+                    padding: 12px 0;
+                }
+            }
+
+            .customFileField{
+                padding: 0;
+
+                .icon{
+                    width: 50px;
+                    padding: 8px;
+                    padding-bottom: 10px;
+                    background: #CDD8FF;
+                }
+
+                .browse{
+                    width: auto;
+                    padding: 3px;
+                    font-size: 14px;
+                    height: 40px;
+                }
+
+                .paymentScreenshot{
+                    width: calc(100% - 55px);
+                    padding: 2px;
+                }
+            }
+
+            .conf{
+                background: url(../img/dashboard/tik.png) no-repeat;
+                background-position: 10px center;
+                background-color: #053EFF;
+                padding: 9px 12px;
+                padding-left: 32px;
+                background-size: 20px auto;
+                font-weight: 500;
+            }
+
+            .witFund{
+                background-image: url(../img/dashboard/walletWhite.svg);
+                background-size: 15px auto;
+            }
+
+            .balance{
+                h3{
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: #053EFF;
+                }
+
+                p{
+                    font-weight: 700;
+                    font-style: italic;
+                }
+            }
+
+            .witFund{
+                margin-top: 15px;
+            }
+
+            @media only screen and (min-width: 576px){
+                .depositInputs{
+                    width: calc(100% - 215px);
+    
+                }
+
+                .fileFieldWrap{
+                    max-width: calc(100% - 195px);
+
+                    .browse{
+                        width: 100px;
+                    }
+                }
+
+                .conf{
+                    margin-left: 20px;
+                }
+
+                .balance{
+                    h3{
+                        font-size: 35px;
+                    }
+                }
+
+                .currentBal::before{
+                    content: '';
+                    position: absolute;
+                    top: 20px;
+                    right: 0;
+                    width: 1px;
+                    height: 30px;
+                    background: #949494;
+                }
+
+                .witFund{
+                    margin-top: -10px;
+                }
+            }
+        }
+    }
+
+    .history{
+        border-radius: 10px;
+
+        .dateRange{
+            .icon{
+                background: #CDD8FF;
+                border-right: none;
+                padding: 10px 15px;
+            }
+
+            .icon, input{
+                border-color: #9AB0FF;
+                color: #898989;
+                font-size: 14px;
+            }
+
+            input{
+                border-left: none;
+            }
+        }
+
+        .hisTable{
+            li{
+                border-radius: 10px;
+                background: #FFFBF2;
+                span{
+                    flex-basis: 25%;
+                    color: #101010;
+                }
+
+                .id{
+                    color: #053EFF;
+                    font-weight: 600;
+                }
+
+                span:nth-child(2){
+                    flex-basis: 50%;
+                }
+            }
+
+            .dhTitle{
+                span{
+                    color: #ACACAC;
+                    font-weight: 600;
+                    font-size: 11px;
+                    font-style: italic;
+                }
+            }
+        }
+
+        .witTable{
+            li{
+                span{
+                    flex-basis: 15%;
+                }
+
+                span:nth-child(1){
+                    flex-basis: 20%;
+                }
+
+                span:nth-child(2){
+                    flex-basis: 30%;
+                }
+
+                span:nth-child(3){
+                    flex-basis: 20%;
+                }
+            }
+        }
+
+        .dateRange{
+            .singleInputWrap{
+                flex-basis: 30%;
+
+                @media only screen and (max-width: 991px){
+                    flex-basis: 50%;
+                }
+            }
+        }
+
+        .transHisTable{
+            min-width: 475px;
+
+            li{
+                justify-content: space-between;
+                span{
+                    flex-basis: 15%;
+                }
+
+                span:nth-child(2){
+                    flex-basis: 25%;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 450px), (min-width: 992px) and (max-width: 1339px){
+            .witTable{
+                li{
+                    font-size: 11px;
+                }
+
+                .dhTitle{
+                    span{
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+
+    .psRowsWrap{
+        .singlePS{
+            border-radius: 10px;
+            form{
+                font-size: 13px;
+                label{
+                    color: #202020;
+                    font-weight: 500;
+                    img{
+                        width: 13px;
+                    }
+                }
+
+                input{
+                    padding: 2px 5px;
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: #282828;
+                    border-color: #DADADA;
+                }
+
+                input::placeholder{
+                    font-weight: 400;
+                    font-size: 11px;
+                }
+
+                .newPic{
+                    p{
+                        font-size: 12px;
+                        font-weight: 700;
+                        font-style: italic;
+                        color: #053EFF;
+                        cursor: pointer;
+                    }
+
+                    img{
+                        max-width: 120px;
+                        border-radius: 15px;
+                    }
+
+                    button{
+                        top: 2px;
+                        right: 2px;
+                        padding: 0 5px;
+                    }
+                }
+
+                button{
+                    font-size: 14px;
+                    font-weight: 500;
+                    background: #053EFF;
+                }
+            }
+        }
+    }
+
+    .widgetTitle{
+        color: #202020;
+        font-size: 14px;
+        font-weight: 800;
+    }
+}
+
+.popupWrap{
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 5000;
+    background: #181100de;
+
+    .popupMsg{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        width: 480px;
+        max-width: calc(100% - 10px);
+        padding: 30px 5px;
+        color: #101010;
+
+        img{
+            width: 50px;
+        }
+
+        h4{
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        p{
+            font-size: 14px;
+        }
+
+        a{
+            background: #053EFF;
+        }
+    }
+}

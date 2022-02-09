@@ -1,0 +1,366 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!--Bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <link rel="stylesheet" href="css/customSelect.css">
+</head>
+
+<body>
+
+    <!--Header start-->
+    <header class="position-fixed py-3 w-100">
+        <div class="mx-auto px-3 maxContainer">
+            <div class="d-inline-block text-center text-sm-start logo">
+                <button id="navToggler" class="d-md-none border-0 bg-transparent">
+                    <img src="img/hamburger.png" class="img-fluid">
+                </button>
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/headLogo.png" class="img-fluid">
+                </a>
+
+                <button id="headerMenuToggler" class="d-sm-none ms-1 border-0 rounded bg-secondary text-light">+</button>
+            </div>
+
+            <div class="float-sm-end pt-3 pt-sm-0 menuList">
+                <ul class="float-sm-start list-unstyled text-center text-sm-start headerMenuItems">
+                    <li class="float-sm-start">
+                        <img src="img/dashboard/sun.svg">
+
+                        <label class="position-relative mb-4 switchBtnLabel">
+                            <input class="position-absolute switchChk" type="checkbox">
+                            <span class="position-absolute rounded-pill transition border border-white switchButton"></span>
+                        </label>
+
+                        <img src="img/dashboard/moon.svg">
+                    </li>
+
+                    <li class="d-inline-block float-sm-end mx-md-1 pt-2">
+                        <button class="border-0 bg-transparent position-relative activeBell">
+                            <img src="img/dashboard/bell.svg">
+                        </button>
+                    </li>
+
+                    <li class="d-inline-block my-3 my-sm-0 float-sm-end mx-md-1 pt-2">
+                        <button class="border-0 bg-transparent">
+                            <img src="img/dashboard/search.svg">
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="float-sm-end text-center mx-sm-0 position-relative ps-sm-2 ps-md-4 usrInfo">
+                    <div class="d-inline-block text-end">
+                        <p>Hello, <span>Cristiano</span></p>
+                        <span class="status text-white rounded unvarified">unvarified</span>
+                    </div>
+
+                    <img src="img/dashboard/usrImg.png" class="img-fluid float-sm-end ms-1 ms-md-3" alt="User">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header start-->
+
+
+
+    <div class="mx-auto px-3 maxContainer">
+
+        <!--Nav start-->
+        <nav id="mainNav" class="pe-3 position-fixed position-md-static">
+            <ul class="list-unstyled mt-sm-5">
+                <li class="my-2">
+                    <a href="dashboard.html" class="d-block px-3 py-2 rounded text-decoration-none active">
+                        <img src="img/dashboard/pie.svg">
+                        <span class="ms-2 pt-1">Dashboard</span>
+                    </a>
+                </li>
+    
+                <li class="my-2">
+                    <a href="depositsFunds.html" class="d-block px-3 py-2 rounded text-decoration-none">
+                        <img src="img/dashboard/deposit.svg">
+                        <span class="ms-2 pt-1">Deposits Funds</span>
+                    </a>
+                </li>
+    
+                <li class="my-2">
+                    <a href="withdrawFunds.html" class="d-block px-3 py-2 rounded text-decoration-none">
+                        <img src="img/dashboard/withdrawFund.svg">
+                        <span class="ms-2 pt-1">Withdraw Funds</span>
+                    </a>
+                </li>
+    
+                <li class="my-2">
+                    <a href="transactionHistory.html" class="d-block px-3 py-2 rounded text-decoration-none">
+                        <img src="img/dashboard/clock.svg">
+                        <span class="ms-2 pt-1">Transaction History</span>
+                    </a>
+                </li>
+    
+                <li class="my-2">
+                    <a href="profile&security.html" class="d-block px-3 py-2 rounded text-decoration-none">
+                        <img src="img/dashboard/p&s.svg">
+                        <span class="ms-2 pt-1">Profile &amp; Security</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-5 pt-4 menuBottom">
+                <!--Custom select start-->
+                <select class="vodiapicker">
+                    <option value="en" class="test" data-thumbnail="img/dashboard/us.png">
+                        English
+                    </option>
+
+                    <option value="au" data-thumbnail="img/dashboard/us.png">
+                        Hindi
+                    </option>
+
+                    <option value="uk" data-thumbnail="img/dashboard/us.png">Chinese</option>
+
+                    <option value="cn" data-thumbnail="img/dashboard/us.png">
+                        German
+                    </option>
+
+                    <option value="de" data-thumbnail="img/dashboard/us.png">
+                        Bangla
+                    </option>
+                </select>
+            
+                <div class="position-relative lang-select">
+                    <button class="btn-select position-relative" value=""></button>
+                    <div class="b position-absolute rounded w-100 bg-white langList">
+                        <ul id="a" class="m-0 px-2 py-1"></ul>
+                    </div>
+                </div>
+                <!--Custom select end-->
+
+                <a href="#" class="text-decoration-none text-start btn mt-4 text-white w-100 logout">
+                    <img class="img-fluid me-2" src="img/dashboard/logout.svg">
+                    <span>Logout</span>
+                </a>
+            </div>
+        </nav>
+        <!--Nav end-->
+    
+        <!--Main start-->
+        <main class="mt-4 ms-auto">
+            <!--Spacer-->
+            <div class="spacer"></div>
+            <!--Spacer-->
+
+            <div class="pageHeading">
+                <h2 class="m-0">Profile &amp; Security</h2>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+
+            <!--PS row section start-->
+            <div class="psRowsWrap">
+                <div class="row w-100 m-0">
+                    <!--Single profile info start-->
+                    <div class="col-xl-6 col-sm-12 col-xs-12 p-1">
+                        <div class="bg-white h-100 px-4 py-3 overflow-hidden singlePS">
+                            <p class="widgetTitle">Basic Information</p>
+
+                            <form>
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/user.svg">
+                                        Full Name
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="text" value="Cristiano Ronaldo" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/envelop.svg">
+                                        Email Address
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="email" value="cristianoronaldo@juventus.com" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/paperPlane.svg">
+                                        Plan
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="text" value="Starter" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/globe.svg">
+                                        Country
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="text" value="Portugal" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Single profile info end-->
+
+                    <!--Single profile info start-->
+                    <div class="col-xl-6 col-sm-12 col-xs-12 p-1">
+                        <div class="bg-white h-100 px-4 py-3 overflow-hidden singlePS">
+                            <p class="widgetTitle">Country Information</p>
+
+                            <form>
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/phone.svg">
+                                        Existing Number
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="text" value="+1124315479" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/phone.svg">
+                                        Enter New Number
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="text"
+                                    placeholder="Enter Contact Number"
+                                    class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/phone.svg">
+                                        Re-enter New Number
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="text"
+                                    placeholder="Enter Contact Number"
+                                    class="form-control">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn text-white float-end">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Single profile info end-->
+                </div>
+
+                <div class="row w-100 mx-0 mb-3">
+                    <!--Single profile info start-->
+                    <div class="col-xl-6 col-sm-12 col-xs-12 p-1">
+                        <div class="bg-white h-100 px-4 py-3 overflow-hidden singlePS">
+                            <p class="widgetTitle">Password Change</p>
+
+                            <form>
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/key.svg">
+                                        New Password
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="password" placeholder="Enter New Password" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-5 col-form-label">
+                                        <img class="me-1" src="img/dashboard/key.svg">
+                                        Confirm Password
+                                    </label>
+                                    <div class="col-sm-7">
+                                    <input type="password"
+                                    placeholder="Confirm Password"
+                                    class="form-control">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn text-white float-end">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Single Profile Info end -->
+
+                    
+                    <!--Single profile info start-->
+                    <div class="col-xl-6 col-sm-12 col-xs-12 p-1">
+                        <div class="bg-white h-100 px-4 py-3 overflow-hidden singlePS">
+                            <p class="widgetTitle">Profile Picture</p>
+
+                            <form>
+                                <div class="row">
+                                    <div class="col-12 newPic">
+                                        <img class="w-100 proPic" src="img/dashboard/proPic.png">
+    
+                                        <div class="d-inline-block position-relative my-2 my-sm-0 ms-sm-3">
+                                            <div class="customFileField">
+                                                <p>Browse New Photo</p>
+                                            </div>
+                                        </div>
+
+                                        <input type="file" id="newProPic" class="d-none">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn text-white float-end">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--PS row section end-->
+        </main>
+        <!--Main end-->
+
+    </div>
+  
+  <!--Bootstrap js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!--JQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+
+  <script src="js/customSelect.js"></script>
+
+  <script src="js/fileTrigger.js"></script>
+
+  <script src="js/dashboard.js"></script>
+
+  <script>
+      fileInputTrigger('.customFileField', '#newProPic');
+  </script>
+</body>
+
+</html>

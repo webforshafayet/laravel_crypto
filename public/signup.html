@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/selectField.css">
+</head>
+
+<body>
+    <!--Header start-->
+    <header>
+        <nav class="navbar p-3 navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/headLogo.png" class="img-fluid">
+            </a>
+        </nav>
+    </header>
+    <!--Header start-->
+
+    <!--Main start-->
+    <main>
+        <div class="px-1 w-100 mx-auto authWrap">
+            <form action="verifyEmail.html" class="ms-auto px-md-3 text-center text-md-start px-lg-0">
+                <h2>
+                    Sign up to get The
+                    <p>Best Benifit</p>
+                </h2>
+
+                <p>Open account for free and trade bitcoin and stock now!</p>
+
+                <div class="row w-100 m-0">
+                    <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="form-control py-2 no-shadow" placeholder="First name"
+                            aria-label="First name">
+                    </div>
+
+                    <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="form-control py-2 no-shadow" placeholder="Last name"
+                            aria-label="Last name">
+                    </div>
+
+                    <div class="my-1 px-1 col-12">
+                        <input type="text" class="form-control py-2 no-shadow" placeholder="Email Address">
+                    </div>
+
+                    <div class="my-1 px-1 col-12">
+                        <input type="text" class="form-control py-2 no-shadow" placeholder="Contact Number">
+                    </div>
+
+                    <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="text-start position-relative custom-select">
+                            <select class="form-select d-none">
+                                <option disabled selected hidden>Choose Package</option>
+                                <option>Starter</option>
+                                <option>Premium</option>
+                                <option>Professional</option>
+                                <option>Qpt Fixed Annuity</option>
+                                <option>Cash Balance</option>
+                                <option>SMFS</option>
+                                <option>DCF</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="text-start position-relative custom-select">
+                            <select class="form-select d-none">
+                                <option disabled selected hidden>Select Country</option>
+                                <option>USA</option>
+                                <option>France</option>
+                                <option>Spain</option>
+                                <option>India</option>
+                                <option>Bangladesh</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="form-control py-2 no-shadow" placeholder="Sum Amount">
+                    </div>
+
+                    <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="form-control py-2 no-shadow" placeholder="Frequent Deposit">
+                    </div>
+
+                    <div class="my-1 px-1 col-12">
+                        <div class="text-start position-relative custom-select">
+                            <select class="form-select d-none">
+                                <option disabled selected hidden>Select Cover Duration</option>
+                                <option>1 Month</option>
+                                <option>3 Months</option>
+                                <option>6 Months</option>
+                                <option>9 Months</option>
+                                <option>12 Months</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-5 policyWrap">
+                        <h6 class="my-3">Policy</h6>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime culpa quidem recusandae nobis
+                            aliquid architecto obcaecati odit dolor architecto obcaecati odit dolor architecto obcaecati
+                            odit dolor obcaecati odit dolor obcaecati odit dolor</p>
+
+                        <label class="position-relative">
+                            <input type="checkbox" class="position-relative">
+                            <span class="position-absolute border rounded chk"></span>
+                            <span class="ms-3">I agree with the terms &amp; condition</span>
+                        </label>
+                    </div>
+
+                    <div class="accordion p-1" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="text-uppercase accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Cover Information
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="row w-100 m-0">
+                                        <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control py-2 no-shadow" placeholder="Address"
+                                                aria-label="Address">
+                                        </div>
+
+                                        <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control py-2 no-shadow" placeholder="State"
+                                                aria-label="State">
+                                        </div>
+
+                                        <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control py-2 no-shadow" placeholder="City"
+                                                aria-label="City">
+                                        </div>
+
+                                        <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <input type="date" class="form-control py-2 no-shadow" aria-label="Date">
+                                        </div>
+
+                                        <div class="my-1 px-1 col-12">
+                                            <div class="text-start position-relative custom-select">
+                                                <label class="form-label">Sex</label>
+                                                <select class="form-select d-none">
+                                                    <option selected>Choose an option</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="text-uppercase accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Add Benificiary
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="row w-100 m-0">
+                                        <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control py-2 no-shadow"
+                                                placeholder="Beneficiary Name" aria-label="Beneficiary Name">
+                                        </div>
+
+                                        <div class="my-1 px-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control py-2 no-shadow"
+                                                placeholder="Beneficiary Number" aria-label="Beneficiary Number">
+                                        </div>
+
+                                        <div class="my-1 px-1 col-12">
+                                            <div class="text-start position-relative custom-select">
+                                                <label class="form-label">Relationship</label>
+
+                                                <select class="form-select d-none">
+                                                    <option selected>Choose an option</option>
+                                                    <option>Mother</option>
+                                                    <option>Father</option>
+                                                    <option>Brother</option>
+                                                    <option>Sister</option>
+                                                    <option>Cousin</option>
+                                                    <option>Uncle</option>
+                                                    <option>Auntie</option>
+                                                    <option>Friend</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="my-1 px-1 col-12">
+                                            <label for="customRange2" class="form-label">
+                                                Beneficiary Percentage <span id="percentage">0</span>%
+                                            </label>
+                                            <input type="range" class="form-range" min="1" max="100"
+                                                id="percentageRange" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-1 px-1 col-12">
+                            <input type="password" class="form-control py-2 no-shadow" placeholder="Type Password">
+                        </div>
+
+                        <div class="my-1 px-1 col-12">
+                            <input type="password" class="form-control py-2 no-shadow" placeholder="Re-type Password">
+                        </div>
+
+                        <div class="my-4 submitBtnWrap">
+                            <p class="d-inline-block py-2">
+                                Already have an account?
+                                <a class="text-decoration-none" href="signin.html">Sign in</a>
+                            </p>
+
+                            <button class="btn text-white px-5 float-end py-2" type="submit">Next</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </main>
+    <!--Main end-->
+
+    <!--Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/signup.js"></script>
+
+    <script>
+        document.getElementById("percentageRange").addEventListener("click", () => {
+            document.getElementById("percentage").innerText = document.getElementById("percentageRange").value;
+        });
+    </script>
+</body>
+
+</html>

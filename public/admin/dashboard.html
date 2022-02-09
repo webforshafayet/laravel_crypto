@@ -1,0 +1,527 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!--Bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <link rel="stylesheet" href="css/customSelect.css">
+</head>
+
+<body>
+
+    <!--Header start-->
+    <header class="position-fixed py-3 w-100">
+        <div class="mx-auto px-3 maxContainer">
+            <div class="d-inline-block text-center text-sm-start logo">
+                <button id="navToggler" class="d-md-none border-0 bg-transparent">
+                    <img src="img/hamburger.png" class="img-fluid">
+                </button>
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/headLogo.png" class="img-fluid logoImg">
+                </a>
+
+                <button id="headerMenuToggler" class="d-sm-none ms-1 border-0 rounded bg-secondary text-light">+</button>
+            </div>
+
+            <div class="float-sm-end pt-3 pt-sm-0 menuList">
+                <ul class="float-sm-start list-unstyled text-center text-sm-start headerMenuItems">
+                    <li class="float-sm-start darkToggler">
+                        <img src="img/dashboard/sun.svg">
+
+                        <label class="position-relative mb-4 switchBtnLabel">
+                            <input class="position-absolute switchChk" type="checkbox">
+                            <span class="position-absolute rounded-pill transition border border-secondary switchButton"></span>
+                        </label>
+                    </li>
+
+                    <li class="d-inline-block float-sm-end mx-md-1 pt-2">
+                        <button class="border-0 bg-transparent position-relative bellIcon activeBell"></button>
+                    </li>
+
+                    <li class="d-inline-block my-3 my-sm-0 float-sm-end mx-md-1 pt-2">
+                        <button class="border-0 bg-transparent srchIcon"></button>
+                    </li>
+                </ul>
+
+                <div class="float-sm-end text-center mx-sm-0 position-relative ps-sm-2 ps-md-4 usrInfo">
+                    <div class="d-inline-block text-end">
+                        <p>Hello, <span>Cristiano</span></p>
+                        <span class="status text-white rounded unvarified">unvarified</span>
+                    </div>
+
+                    <img src="img/dashboard/usrImg.png" class="img-fluid float-sm-end ms-1 ms-md-3" alt="User">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header start-->
+
+
+
+    <div class="mx-auto px-3 maxContainer">
+
+        <!--Nav start-->
+        <nav id="mainNav" class="pe-2 position-fixed position-md-static">
+            <ul class="list-unstyled mt-sm-5">
+                <li class="my-1">
+                    <a href="dashboard.html" class="d-block pe-3 py-2 rounded text-decoration-none dashboard active">
+                        <span class="ms-2 pt-1">Admin Overview</span>
+                    </a>
+                </li>
+    
+                <li class="my-1">
+                    <a href="userManagement.html" class="d-block pe-3 py-2 rounded text-decoration-none usrMngmt">
+                        <span class="ms-2 pt-1">User Management</span>
+                    </a>
+                </li>
+
+                <li class="my-1">
+                    <a href="depositManagement.html" class="d-block pe-3 py-2 rounded text-decoration-none deposMngmt">
+                        <span class="ms-2 pt-1">Deposits Management</span>
+                    </a>
+                </li>
+
+                <li class="my-1">
+                    <a href="withdrawManagement.html" class="d-block pe-3 py-2 rounded text-decoration-none withMngmt">
+                        <span class="ms-2 pt-1">Withdraw Management</span>
+                    </a>
+                </li>
+    
+                <li class="my-1">
+                    <a href="financeManagement.html" class="d-block pe-3 py-2 rounded text-decoration-none financeMngmt">
+                        <span class="ms-2 pt-1">Finance Management</span>
+                    </a>
+                </li>
+
+                <li class="my-1">
+                    <a href="profile&security.html" class="d-block pe-3 py-2 rounded text-decoration-none ps">
+                        <span class="ms-2 pt-1">Profile &amp; Security</span>
+                    </a>
+                </li>
+
+                <li class="my-1">
+                    <a href="quoteManagement.html" class="d-block pe-3 py-2 rounded text-decoration-none quoteMngmt">
+                        <span class="ms-2 pt-1">Quote Management</span>
+                    </a>
+                </li>
+
+                <li class="my-1">
+                    <a href="beneficiaryMngmt.html" class="d-block pe-3 py-2 rounded text-decoration-none benifMngmt">
+                        <span class="ms-2 pt-1">Beneficiary Management</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-5 pt-4 menuBottom">
+                <!--Custom select start-->
+                <select class="vodiapicker">
+                    <option value="en" class="test" data-thumbnail="img/dashboard/us.png">
+                        English
+                    </option>
+
+                    <option value="au" data-thumbnail="img/dashboard/us.png">
+                        Hindi
+                    </option>
+
+                    <option value="uk" data-thumbnail="img/dashboard/us.png">Chinese</option>
+
+                    <option value="cn" data-thumbnail="img/dashboard/us.png">
+                        German
+                    </option>
+
+                    <option value="de" data-thumbnail="img/dashboard/us.png">
+                        Bangla
+                    </option>
+                </select>
+            
+                <div class="position-relative lang-select">
+                    <button class="btn-select position-relative" value=""></button>
+                    <div class="b position-absolute rounded w-100 bg-white langList">
+                        <ul id="a" class="m-0 px-2 py-1"></ul>
+                    </div>
+                </div>
+                <!--Custom select end-->
+
+                <a href="#" class="text-decoration-none text-start btn mt-4 text-white w-100 logout">
+                    <img class="img-fluid me-2" src="img/dashboard/logout.svg">
+                    <span>Logout</span>
+                </a>
+            </div>
+        </nav>
+        <!--Nav end-->
+    
+        <!--Main start-->
+        <main class="mt-4 ms-auto">
+            <!--Spacer-->
+            <div class="spacer"></div>
+            <!--Spacer-->
+
+            <div class="pageHeading">
+                <h2 class="m-0">Dashboard</h2>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+
+            <!--Summary section start-->
+            <div class="accountSummary">
+                <div class="row w-100 m-0">
+                    <!--Single summary start-->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-1">
+                        <div class="bg-white p-2 h-100 singleSummary">
+                            <div class="float-start text-center rounded summaryLeft money"></div>
+
+                            <div class="ps-3 d-inline-block summaryRight">
+                                <h4 class="m-0">Current Balance</h4>
+                                <p class="mb-2">as of 10 Jan 2021</p>
+                                <h3>$15,125.78</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single summary end-->
+
+                    <!--Single summary start-->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-1">
+                        <div class="bg-white p-2 h-100 singleSummary">
+                            <div class="float-start text-center rounded summaryLeft profit"></div>
+
+                            <div class="ps-3 d-inline-block summaryRight">
+                                <h4 class="m-0">Current Profit</h4>
+                                <p class="mb-2">as of 10 Jan 2021</p>
+                                <h3>$758.21</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single summary end-->
+
+                    <!--Single summary start-->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-1">
+                        <div class="bg-white p-2 h-100 singleSummary">
+                            <div class="float-start text-center rounded summaryLeft withdrawal"></div>
+
+                            <div class="ps-3 d-inline-block summaryRight">
+                                <h4 class="m-0">Last Withdrawal</h4>
+                                <p class="mb-2">as of 10 Jan 2021</p>
+                                <h3>$1,235.87</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single summary end-->
+
+                    <!--Single summary start-->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 p-1">
+                        <div class="bg-white p-2 h-100 singleSummary">
+                            <div class="float-start text-center rounded summaryLeft wallet"></div>
+
+                            <div class="ps-3 d-inline-block summaryRight">
+                                <h4 class="m-0">Last Deposit</h4>
+                                <p class="mb-2">as of 10 Jan 2021</p>
+                                <h3>$5,125.78</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single summary end-->
+
+                </div>
+            </div>
+            <!--Summary section end-->
+            
+            <!--Statistics section start-->
+            <div class="statics">
+                <div class="row w-100 m-0">
+
+                    <!--Overview column start-->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 px-1 py-2">
+                        <div class="bg-white p-3 h-100 singleStat overviewWrap">
+                            <h4 class="statTitle">Overview</h4>
+
+                            <!--Overview table start-->
+                            <table class="w-100 overviewTable">
+                                <thead>
+                                    <tr class="position-relative dropdownContainer">
+                                        <th class="firstTh"></th>
+                                        <th class="lastTh"></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="position-relative">
+                                        <td class="d-none">Comodities</td>
+                                        <td class="d-none">This month</td>
+
+                                        <td class="text-uppercase ps-2 py-2">
+                                            <p class="m-0 fw-bold">Es1!</p>
+                                            <p class="m-0 overviewSub">E-Mini s&amp;p</p>
+                                        </td>
+    
+                                        <td class="py-2 amount">3762.25<sup>E</sup></td>
+    
+                                        <td class="text-danger pe-2 py-2 text-end">
+                                            <p class="m-0 fw-bold">-0.76%</p>
+                                            <p class="m-0">-29.00</p>
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="position-relative">
+                                        <td class="d-none">Filter 2</td>
+                                        <td class="d-none">Last month</td>
+
+                                        <td class="text-uppercase ps-2 py-2">
+                                            <p class="m-0 fw-bold">Es1!</p>
+                                            <p class="m-0 overviewSub">E-Mini s&amp;p</p>
+                                        </td>
+    
+                                        <td class="py-2 amount">3762.25<sup>E</sup></td>
+    
+                                        <td class="text-danger pe-2 py-2 text-end">
+                                            <p class="m-0 fw-bold">-0.76%</p>
+                                            <p class="m-0">-29.00</p>
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="position-relative">
+                                        <td class="d-none">Comodities</td>
+                                        <td class="d-none">This month</td>
+
+                                        <td class="text-uppercase ps-2 py-2">
+                                            <p class="m-0 fw-bold">Es1!</p>
+                                            <p class="m-0 overviewSub">E-Mini s&amp;p</p>
+                                        </td>
+    
+                                        <td class="py-2 amount">3762.25<sup>E</sup></td>
+    
+                                        <td class="text-danger pe-2 py-2 text-end">
+                                            <p class="m-0 fw-bold">-0.76%</p>
+                                            <p class="m-0">-29.00</p>
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="position-relative">
+                                        <td class="d-none">Filter3</td>
+                                        <td class="d-none">This month</td>
+
+                                        <td class="text-uppercase ps-2 py-2">
+                                            <p class="m-0 fw-bold">Es1!</p>
+                                            <p class="m-0 overviewSub">E-Mini s&amp;p</p>
+                                        </td>
+    
+                                        <td class="py-2 amount">3762.25<sup>E</sup></td>
+    
+                                        <td class="text-danger pe-2 py-2 text-end">
+                                            <p class="m-0 fw-bold">-0.76%</p>
+                                            <p class="m-0">-29.00</p>
+                                        </td>
+                                    </tr>
+    
+                                    <tr class="position-relative">
+                                        <td class="d-none">Comodities</td>
+                                        <td class="d-none">This month</td>
+
+                                        <td class="text-uppercase ps-2 py-2">
+                                            <p class="m-0 fw-bold">Es1!</p>
+                                            <p class="m-0 overviewSub">E-Mini s&amp;p</p>
+                                        </td>
+    
+                                        <td class="py-2 amount">3762.25<sup>E</sup></td>
+    
+                                        <td class="text-danger pe-2 py-2 text-end">
+                                            <p class="m-0 fw-bold">-0.76%</p>
+                                            <p class="m-0">-29.00</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--Overview table end-->
+                        </div>
+                    </div>
+                    <!--Overview column end-->
+
+                    <!--Analytics column start-->
+                    <div class="col-xl-5 col-lg-4 col-md-6 col-sm-6 col-xs-12 px-1 py-2">
+                        <div class="bg-white p-3 h-100 position-relative singleStat analyticsWrap">
+                            <h4 class="statTitle">
+                                Analytics
+                                <span class="text-uppercase float-end">Es1</span>
+                            </h4>
+
+                            <div class="position-absolute w-100 analyticsGraph">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Analytics column end-->
+
+                    <!--IP log column start-->
+                    <div class="col-xl-4 col-lg-4 col-md-8 col-sm-8 col-xs-12 px-1 py-2">
+                        <div class="bg-white p-3 singleStat ipLogWrap">
+                            <h4 class="statTitle">IP Log</h4>
+
+                            <ul class="list-unstyled text-uppercase w-100 ipLogTable">
+                                <li class="bg-transparent logTitle">
+                                    <span class="d-inline-block">Date/time</span>
+                                    <span class="d-inline-block text-end">IP Address</span>
+                                </li>
+
+                                <li class="d-flex my-2 p-2">
+                                    <span>
+                                        <p class="m-0">2021-01-12</p>
+                                        <p class="m-0 time">22:26:05 gmt(+1)</p>
+                                    </span>
+                                    
+                                    <span class="text-end ipAddress">103.217.111.167</span>
+                                </li>
+
+                                <li class="d-flex my-2 p-2">
+                                    <span>
+                                        <p class="m-0">2021-01-12</p>
+                                        <p class="m-0 time">22:26:05 gmt(+1)</p>
+                                    </span>
+                                    
+                                    <span class="text-end ipAddress">103.217.111.167</span>
+                                </li>
+
+                                <li class="d-flex my-2 p-2">
+                                    <span>
+                                        <p class="m-0">2021-01-12</p>
+                                        <p class="m-0 time">22:26:05 gmt(+1)</p>
+                                    </span>
+                                    
+                                    <span class="text-end ipAddress">103.217.111.167</span>
+                                </li>
+
+                                <li class="d-flex my-2 p-2">
+                                    <span>
+                                        <p class="m-0">2021-01-12</p>
+                                        <p class="m-0 time">22:26:05 gmt(+1)</p>
+                                    </span>
+                                    
+                                    <span class="text-end ipAddress">103.217.111.167</span>
+                                </li>
+
+                                <li class="d-flex my-2 p-2">
+                                    <span>
+                                        <p class="m-0">2021-01-12</p>
+                                        <p class="m-0 time">22:26:05 gmt(+1)</p>
+                                    </span>
+                                    
+                                    <span class="text-end ipAddress">103.217.111.167</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--IP log column end-->
+
+                </div>
+            </div>
+            <!--Statistics section end-->
+        </main>
+        <!--Main end-->
+
+    </div>
+  
+  <!--Bootstrap js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!--JQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+
+  <!--ddtf js-->
+  <script src="js/vendor//ddtf.js"></script>
+
+  <!--apexcharts js-->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <script src="js/customSelect.js"></script>
+
+  <script src="js/dashboard.js"></script>
+
+  <script>
+      $(document).ready(function(){
+        $('table').ddTableFilter();
+      });
+
+      var options = {
+        series: [{
+            name: 'analytics',
+            data: [1100, 2300, 800, 3700]
+        }],
+
+        chart: {
+            type: 'area',
+            foreColor: '#9a9797',
+            height: 300,
+            toolbar: {
+                show: false
+            },
+            zoom: {
+                enabled: false
+            }
+        },
+
+        markers: {
+            size: 0,
+            colors: ["#f3ab02"],
+            strokeColors: "#fff",
+            strokeWidth: 2,
+            hover: {
+                size: 6,
+            }
+        },
+
+        dataLabels: {
+            enabled: false
+        },
+
+        stroke: {
+            show: true,
+            width: 2,
+            curve: 'smooth'
+        },
+
+        fill: {
+            type: 'solid'
+        },
+        colors: ["#f3ab02"],
+
+        xaxis: {
+            categories: ['Feb', 'Mar', 'Apr', 'May'],
+            axisTicks: {
+                show: false
+            },
+        },
+
+        yaxis: {
+            labels: {
+                formatter: value => value>0 ? value : '0000'
+            },
+        },
+    };
+
+    var chart = new ApexCharts(document.querySelector(".analyticsGraph"), options);
+    chart.render();
+
+  </script>
+</body>
+
+</html>
